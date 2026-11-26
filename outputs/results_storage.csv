@@ -1,0 +1,13 @@
+dataset,algorithm,total_movement,avg_seek
+disk_textbook,FCFS,640,80.0
+disk_textbook,SSTF,236,29.5
+disk_textbook,SCAN,331,41.38
+disk_textbook,C-SCAN,382,47.75
+disk_textbook,LOOK,299,37.38
+disk_textbook,C-LOOK,322,40.25
+disk_heavy,FCFS,5125,256.25
+disk_heavy,SSTF,723,36.15
+disk_heavy,SCAN,739,36.95
+disk_heavy,C-SCAN,988,49.4
+disk_heavy,LOOK,729,36.45
+disk_heavy,C-LOOK,958,47.9

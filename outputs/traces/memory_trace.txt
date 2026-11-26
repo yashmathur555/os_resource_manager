@@ -1,0 +1,381 @@
+##### Dataset: pages_textbook (20 references) #####
+
+== Page replacement: FIFO, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 7   | 7      | FAULT  |         |
+| 0   | 7 0    | FAULT  |         |
+| 1   | 7 0 1  | FAULT  |         |
+| 2   | 0 1 2  | FAULT  | 7       |
+| 0   | 0 1 2  | hit    |         |
+| 3   | 1 2 3  | FAULT  | 0       |
+| 0   | 2 3 0  | FAULT  | 1       |
+| 4   | 3 0 4  | FAULT  | 2       |
+| 2   | 0 4 2  | FAULT  | 3       |
+| 3   | 4 2 3  | FAULT  | 0       |
+| 0   | 2 3 0  | FAULT  | 4       |
+| 3   | 2 3 0  | hit    |         |
+| 2   | 2 3 0  | hit    |         |
+| 1   | 3 0 1  | FAULT  | 2       |
+| 2   | 0 1 2  | FAULT  | 3       |
+| 0   | 0 1 2  | hit    |         |
+| 1   | 0 1 2  | hit    |         |
+| 7   | 1 2 7  | FAULT  | 0       |
+| 0   | 2 7 0  | FAULT  | 1       |
+| 1   | 7 0 1  | FAULT  | 2       |
++-----+--------+--------+---------+
+Faults=15  Hits=5  Hit ratio=25.00%
+
+== Page replacement: LRU, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 7   | 7      | FAULT  |         |
+| 0   | 7 0    | FAULT  |         |
+| 1   | 7 0 1  | FAULT  |         |
+| 2   | 2 0 1  | FAULT  | 7       |
+| 0   | 2 0 1  | hit    |         |
+| 3   | 2 0 3  | FAULT  | 1       |
+| 0   | 2 0 3  | hit    |         |
+| 4   | 4 0 3  | FAULT  | 2       |
+| 2   | 4 0 2  | FAULT  | 3       |
+| 3   | 4 3 2  | FAULT  | 0       |
+| 0   | 0 3 2  | FAULT  | 4       |
+| 3   | 0 3 2  | hit    |         |
+| 2   | 0 3 2  | hit    |         |
+| 1   | 1 3 2  | FAULT  | 0       |
+| 2   | 1 3 2  | hit    |         |
+| 0   | 1 0 2  | FAULT  | 3       |
+| 1   | 1 0 2  | hit    |         |
+| 7   | 1 0 7  | FAULT  | 2       |
+| 0   | 1 0 7  | hit    |         |
+| 1   | 1 0 7  | hit    |         |
++-----+--------+--------+---------+
+Faults=12  Hits=8  Hit ratio=40.00%
+
+== Page replacement: OPT, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 7   | 7      | FAULT  |         |
+| 0   | 7 0    | FAULT  |         |
+| 1   | 7 0 1  | FAULT  |         |
+| 2   | 2 0 1  | FAULT  | 7       |
+| 0   | 2 0 1  | hit    |         |
+| 3   | 2 0 3  | FAULT  | 1       |
+| 0   | 2 0 3  | hit    |         |
+| 4   | 2 4 3  | FAULT  | 0       |
+| 2   | 2 4 3  | hit    |         |
+| 3   | 2 4 3  | hit    |         |
+| 0   | 2 0 3  | FAULT  | 4       |
+| 3   | 2 0 3  | hit    |         |
+| 2   | 2 0 3  | hit    |         |
+| 1   | 2 0 1  | FAULT  | 3       |
+| 2   | 2 0 1  | hit    |         |
+| 0   | 2 0 1  | hit    |         |
+| 1   | 2 0 1  | hit    |         |
+| 7   | 7 0 1  | FAULT  | 2       |
+| 0   | 7 0 1  | hit    |         |
+| 1   | 7 0 1  | hit    |         |
++-----+--------+--------+---------+
+Faults=9  Hits=11  Hit ratio=55.00%
+
+== Page replacement: CLOCK, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 7   | 7      | FAULT  |         |
+| 0   | 7 0    | FAULT  |         |
+| 1   | 7 0 1  | FAULT  |         |
+| 2   | 2 0 1  | FAULT  | 7       |
+| 0   | 2 0 1  | hit    |         |
+| 3   | 2 0 3  | FAULT  | 1       |
+| 0   | 2 0 3  | hit    |         |
+| 4   | 4 0 3  | FAULT  | 2       |
+| 2   | 4 2 3  | FAULT  | 0       |
+| 3   | 4 2 3  | hit    |         |
+| 0   | 4 2 0  | FAULT  | 3       |
+| 3   | 3 2 0  | FAULT  | 4       |
+| 2   | 3 2 0  | hit    |         |
+| 1   | 3 1 0  | FAULT  | 2       |
+| 2   | 3 1 2  | FAULT  | 0       |
+| 0   | 0 1 2  | FAULT  | 3       |
+| 1   | 0 1 2  | hit    |         |
+| 7   | 0 7 2  | FAULT  | 1       |
+| 0   | 0 7 2  | hit    |         |
+| 1   | 0 7 1  | FAULT  | 2       |
++-----+--------+--------+---------+
+Faults=14  Hits=6  Hit ratio=30.00%
+
+##### Dataset: pages_belady (12 references) #####
+
+== Page replacement: FIFO, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 1   | 1      | FAULT  |         |
+| 2   | 1 2    | FAULT  |         |
+| 3   | 1 2 3  | FAULT  |         |
+| 4   | 2 3 4  | FAULT  | 1       |
+| 1   | 3 4 1  | FAULT  | 2       |
+| 2   | 4 1 2  | FAULT  | 3       |
+| 5   | 1 2 5  | FAULT  | 4       |
+| 1   | 1 2 5  | hit    |         |
+| 2   | 1 2 5  | hit    |         |
+| 3   | 2 5 3  | FAULT  | 1       |
+| 4   | 5 3 4  | FAULT  | 2       |
+| 5   | 5 3 4  | hit    |         |
++-----+--------+--------+---------+
+Faults=9  Hits=3  Hit ratio=25.00%
+
+== Page replacement: LRU, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 1   | 1      | FAULT  |         |
+| 2   | 1 2    | FAULT  |         |
+| 3   | 1 2 3  | FAULT  |         |
+| 4   | 4 2 3  | FAULT  | 1       |
+| 1   | 4 1 3  | FAULT  | 2       |
+| 2   | 4 1 2  | FAULT  | 3       |
+| 5   | 5 1 2  | FAULT  | 4       |
+| 1   | 5 1 2  | hit    |         |
+| 2   | 5 1 2  | hit    |         |
+| 3   | 3 1 2  | FAULT  | 5       |
+| 4   | 3 4 2  | FAULT  | 1       |
+| 5   | 3 4 5  | FAULT  | 2       |
++-----+--------+--------+---------+
+Faults=10  Hits=2  Hit ratio=16.67%
+
+== Page replacement: OPT, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 1   | 1      | FAULT  |         |
+| 2   | 1 2    | FAULT  |         |
+| 3   | 1 2 3  | FAULT  |         |
+| 4   | 1 2 4  | FAULT  | 3       |
+| 1   | 1 2 4  | hit    |         |
+| 2   | 1 2 4  | hit    |         |
+| 5   | 1 2 5  | FAULT  | 4       |
+| 1   | 1 2 5  | hit    |         |
+| 2   | 1 2 5  | hit    |         |
+| 3   | 3 2 5  | FAULT  | 1       |
+| 4   | 4 2 5  | FAULT  | 3       |
+| 5   | 4 2 5  | hit    |         |
++-----+--------+--------+---------+
+Faults=7  Hits=5  Hit ratio=41.67%
+
+== Page replacement: CLOCK, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 1   | 1      | FAULT  |         |
+| 2   | 1 2    | FAULT  |         |
+| 3   | 1 2 3  | FAULT  |         |
+| 4   | 4 2 3  | FAULT  | 1       |
+| 1   | 4 1 3  | FAULT  | 2       |
+| 2   | 4 1 2  | FAULT  | 3       |
+| 5   | 5 1 2  | FAULT  | 4       |
+| 1   | 5 1 2  | hit    |         |
+| 2   | 5 1 2  | hit    |         |
+| 3   | 5 3 2  | FAULT  | 1       |
+| 4   | 5 3 4  | FAULT  | 2       |
+| 5   | 5 3 4  | hit    |         |
++-----+--------+--------+---------+
+Faults=9  Hits=3  Hit ratio=25.00%
+
+##### Dataset: pages_locality (36 references) #####
+
+== Page replacement: FIFO, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 1   | 1      | FAULT  |         |
+| 2   | 1 2    | FAULT  |         |
+| 3   | 1 2 3  | FAULT  |         |
+| 1   | 1 2 3  | hit    |         |
+| 2   | 1 2 3  | hit    |         |
+| 4   | 2 3 4  | FAULT  | 1       |
+| 1   | 3 4 1  | FAULT  | 2       |
+| 2   | 4 1 2  | FAULT  | 3       |
+| 5   | 1 2 5  | FAULT  | 4       |
+| 1   | 1 2 5  | hit    |         |
+| 2   | 1 2 5  | hit    |         |
+| 3   | 2 5 3  | FAULT  | 1       |
+| 1   | 5 3 1  | FAULT  | 2       |
+| 2   | 3 1 2  | FAULT  | 5       |
+| 4   | 1 2 4  | FAULT  | 3       |
+| 1   | 1 2 4  | hit    |         |
+| 2   | 1 2 4  | hit    |         |
+| 5   | 2 4 5  | FAULT  | 1       |
+| 6   | 4 5 6  | FAULT  | 2       |
+| 7   | 5 6 7  | FAULT  | 4       |
+| 6   | 5 6 7  | hit    |         |
+| 7   | 5 6 7  | hit    |         |
+| 8   | 6 7 8  | FAULT  | 5       |
+| 6   | 6 7 8  | hit    |         |
+| 7   | 6 7 8  | hit    |         |
+| 9   | 7 8 9  | FAULT  | 6       |
+| 6   | 8 9 6  | FAULT  | 7       |
+| 7   | 9 6 7  | FAULT  | 8       |
+| 1   | 6 7 1  | FAULT  | 9       |
+| 2   | 7 1 2  | FAULT  | 6       |
+| 3   | 1 2 3  | FAULT  | 7       |
+| 4   | 2 3 4  | FAULT  | 1       |
+| 1   | 3 4 1  | FAULT  | 2       |
+| 2   | 4 1 2  | FAULT  | 3       |
+| 3   | 1 2 3  | FAULT  | 4       |
+| 4   | 2 3 4  | FAULT  | 1       |
++-----+--------+--------+---------+
+Faults=26  Hits=10  Hit ratio=27.78%
+
+== Page replacement: LRU, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 1   | 1      | FAULT  |         |
+| 2   | 1 2    | FAULT  |         |
+| 3   | 1 2 3  | FAULT  |         |
+| 1   | 1 2 3  | hit    |         |
+| 2   | 1 2 3  | hit    |         |
+| 4   | 1 2 4  | FAULT  | 3       |
+| 1   | 1 2 4  | hit    |         |
+| 2   | 1 2 4  | hit    |         |
+| 5   | 1 2 5  | FAULT  | 4       |
+| 1   | 1 2 5  | hit    |         |
+| 2   | 1 2 5  | hit    |         |
+| 3   | 1 2 3  | FAULT  | 5       |
+| 1   | 1 2 3  | hit    |         |
+| 2   | 1 2 3  | hit    |         |
+| 4   | 1 2 4  | FAULT  | 3       |
+| 1   | 1 2 4  | hit    |         |
+| 2   | 1 2 4  | hit    |         |
+| 5   | 1 2 5  | FAULT  | 4       |
+| 6   | 6 2 5  | FAULT  | 1       |
+| 7   | 6 7 5  | FAULT  | 2       |
+| 6   | 6 7 5  | hit    |         |
+| 7   | 6 7 5  | hit    |         |
+| 8   | 6 7 8  | FAULT  | 5       |
+| 6   | 6 7 8  | hit    |         |
+| 7   | 6 7 8  | hit    |         |
+| 9   | 6 7 9  | FAULT  | 8       |
+| 6   | 6 7 9  | hit    |         |
+| 7   | 6 7 9  | hit    |         |
+| 1   | 6 7 1  | FAULT  | 9       |
+| 2   | 2 7 1  | FAULT  | 6       |
+| 3   | 2 3 1  | FAULT  | 7       |
+| 4   | 2 3 4  | FAULT  | 1       |
+| 1   | 1 3 4  | FAULT  | 2       |
+| 2   | 1 2 4  | FAULT  | 3       |
+| 3   | 1 2 3  | FAULT  | 4       |
+| 4   | 4 2 3  | FAULT  | 1       |
++-----+--------+--------+---------+
+Faults=20  Hits=16  Hit ratio=44.44%
+
+== Page replacement: OPT, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 1   | 1      | FAULT  |         |
+| 2   | 1 2    | FAULT  |         |
+| 3   | 1 2 3  | FAULT  |         |
+| 1   | 1 2 3  | hit    |         |
+| 2   | 1 2 3  | hit    |         |
+| 4   | 1 2 4  | FAULT  | 3       |
+| 1   | 1 2 4  | hit    |         |
+| 2   | 1 2 4  | hit    |         |
+| 5   | 1 2 5  | FAULT  | 4       |
+| 1   | 1 2 5  | hit    |         |
+| 2   | 1 2 5  | hit    |         |
+| 3   | 1 2 3  | FAULT  | 5       |
+| 1   | 1 2 3  | hit    |         |
+| 2   | 1 2 3  | hit    |         |
+| 4   | 1 2 4  | FAULT  | 3       |
+| 1   | 1 2 4  | hit    |         |
+| 2   | 1 2 4  | hit    |         |
+| 5   | 1 2 5  | FAULT  | 4       |
+| 6   | 1 2 6  | FAULT  | 5       |
+| 7   | 1 7 6  | FAULT  | 2       |
+| 6   | 1 7 6  | hit    |         |
+| 7   | 1 7 6  | hit    |         |
+| 8   | 8 7 6  | FAULT  | 1       |
+| 6   | 8 7 6  | hit    |         |
+| 7   | 8 7 6  | hit    |         |
+| 9   | 9 7 6  | FAULT  | 8       |
+| 6   | 9 7 6  | hit    |         |
+| 7   | 9 7 6  | hit    |         |
+| 1   | 1 7 6  | FAULT  | 9       |
+| 2   | 1 2 6  | FAULT  | 7       |
+| 3   | 1 2 3  | FAULT  | 6       |
+| 4   | 1 2 4  | FAULT  | 3       |
+| 1   | 1 2 4  | hit    |         |
+| 2   | 1 2 4  | hit    |         |
+| 3   | 3 2 4  | FAULT  | 1       |
+| 4   | 3 2 4  | hit    |         |
++-----+--------+--------+---------+
+Faults=17  Hits=19  Hit ratio=52.78%
+
+== Page replacement: CLOCK, 3 frames ==
++-----+--------+--------+---------+
+| Ref | Frames | Result | Evicted |
++-----+--------+--------+---------+
+| 1   | 1      | FAULT  |         |
+| 2   | 1 2    | FAULT  |         |
+| 3   | 1 2 3  | FAULT  |         |
+| 1   | 1 2 3  | hit    |         |
+| 2   | 1 2 3  | hit    |         |
+| 4   | 4 2 3  | FAULT  | 1       |
+| 1   | 4 1 3  | FAULT  | 2       |
+| 2   | 4 1 2  | FAULT  | 3       |
+| 5   | 5 1 2  | FAULT  | 4       |
+| 1   | 5 1 2  | hit    |         |
+| 2   | 5 1 2  | hit    |         |
+| 3   | 5 3 2  | FAULT  | 1       |
+| 1   | 5 3 1  | FAULT  | 2       |
+| 2   | 2 3 1  | FAULT  | 5       |
+| 4   | 2 4 1  | FAULT  | 3       |
+| 1   | 2 4 1  | hit    |         |
+| 2   | 2 4 1  | hit    |         |
+| 5   | 2 4 5  | FAULT  | 1       |
+| 6   | 6 4 5  | FAULT  | 2       |
+| 7   | 6 7 5  | FAULT  | 4       |
+| 6   | 6 7 5  | hit    |         |
+| 7   | 6 7 5  | hit    |         |
+| 8   | 6 7 8  | FAULT  | 5       |
+| 6   | 6 7 8  | hit    |         |
+| 7   | 6 7 8  | hit    |         |
+| 9   | 9 7 8  | FAULT  | 6       |
+| 6   | 9 6 8  | FAULT  | 7       |
+| 7   | 9 6 7  | FAULT  | 8       |
+| 1   | 1 6 7  | FAULT  | 9       |
+| 2   | 1 2 7  | FAULT  | 6       |
+| 3   | 1 2 3  | FAULT  | 7       |
+| 4   | 4 2 3  | FAULT  | 1       |
+| 1   | 4 1 3  | FAULT  | 2       |
+| 2   | 4 1 2  | FAULT  | 3       |
+| 3   | 3 1 2  | FAULT  | 4       |
+| 4   | 3 4 2  | FAULT  | 1       |
++-----+--------+--------+---------+
+Faults=26  Hits=10  Hit ratio=27.78%
+
+##### Contiguous allocation (data/alloc_ops.txt) #####
+
+== first-fit ==
+Used=740  Free=260  Utilization=74.0%  Holes=2  Largest hole=212  External fragmentation=18.46%
+Failed allocations: D
+Layout (start,size,name): [(212, 200, 'E'), (412, 90, 'F'), (502, 150, 'G'), (652, 300, 'H')]
+Free holes (start,size): [(0, 212), (952, 48)]
+
+== best-fit ==
+Used=440  Free=560  Utilization=44.0%  Holes=3  Largest hole=289  External fragmentation=48.39%
+Failed allocations: D, H
+Layout (start,size,name): [(212, 90, 'F'), (302, 150, 'G'), (741, 200, 'E')]
+Free holes (start,size): [(0, 212), (452, 289), (941, 59)]
+
+== worst-fit ==
+Used=740  Free=260  Utilization=74.0%  Holes=2  Largest hole=212  External fragmentation=18.46%
+Failed allocations: D
+Layout (start,size,name): [(212, 200, 'E'), (412, 90, 'F'), (502, 150, 'G'), (652, 300, 'H')]
+Free holes (start,size): [(0, 212), (952, 48)]

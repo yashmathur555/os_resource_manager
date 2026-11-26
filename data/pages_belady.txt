@@ -1,0 +1,2 @@
+# Reference string that exhibits Belady's anomaly under FIFO (3 frames=9, 4 frames=10)
+1 2 3 4 1 2 5 1 2 3 4 5

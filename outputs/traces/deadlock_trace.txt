@@ -1,0 +1,21 @@
+== Banker's safety check: banker_safe.json ==
++------+---------+-----------+-------------+
+| Step | Process | Need      | Work before |
++------+---------+-----------+-------------+
+| 1    | P1      | [1, 2, 2] | [3, 3, 2]   |
+| 2    | P3      | [0, 1, 1] | [5, 3, 2]   |
+| 3    | P4      | [4, 3, 1] | [7, 4, 3]   |
+| 4    | P0      | [7, 4, 3] | [7, 4, 5]   |
+| 5    | P2      | [6, 0, 0] | [7, 5, 5]   |
++------+---------+-----------+-------------+
+Safe = True   Safe sequence = P1 -> P3 -> P4 -> P0 -> P2
+Requests are processed in order; a granted request changes the system state.
+P1 requests [1, 0, 2]: GRANTED - Safe - request granted. (safe sequence: P1 -> P3 -> P4 -> P0 -> P2)
+P4 requests [3, 3, 0]: DENIED - Resources not available - process must wait.
+P0 requests [0, 2, 0]: DENIED - Granting would leave the system in an UNSAFE state.
+P2 requests [6, 0, 0]: DENIED - Resources not available - process must wait.
+
+== banker_unsafe.json ==
+Safe = False
+Detection deadlock_none: deadlocked = none; completion order = P0 -> P2 -> P3 -> P4 -> P1
+Detection deadlock_present: deadlocked = ['P1', 'P2', 'P3', 'P4']; completion order = P0

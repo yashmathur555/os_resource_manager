@@ -1,0 +1,101 @@
+
+============================================================
+        OS RESOURCE MANAGER SIMULATOR  (Python + Bash)
+============================================================
+ 1. CPU scheduling         (FCFS / SJF / SRTF / Priority / RR)
+ 2. Page replacement       (FIFO / LRU / OPT / Clock)
+ 3. Memory allocation      (first / best / worst fit)
+ 4. Deadlock handling      (Banker's + detection)
+ 5. Disk scheduling        (FCFS / SSTF / SCAN / C-SCAN / LOOK / C-LOOK)
+ 6. Run FULL analysis      (tables, charts, CSV, traces)
+ 7. Bash tools             (system snapshot / log summary / generate workload)
+ 0. Exit
+
+Select an option: Invalid option '9'. Please enter 0-7.
+
+============================================================
+        OS RESOURCE MANAGER SIMULATOR  (Python + Bash)
+============================================================
+ 1. CPU scheduling         (FCFS / SJF / SRTF / Priority / RR)
+ 2. Page replacement       (FIFO / LRU / OPT / Clock)
+ 3. Memory allocation      (first / best / worst fit)
+ 4. Deadlock handling      (Banker's + detection)
+ 5. Disk scheduling        (FCFS / SSTF / SCAN / C-SCAN / LOOK / C-LOOK)
+ 6. Run FULL analysis      (tables, charts, CSV, traces)
+ 7. Bash tools             (system snapshot / log summary / generate workload)
+ 0. Exit
+
+Select an option: Workload CSV [data/workload_textbook.csv]: 
+[ERROR] File not found: /home/claude/os_resource_manager/data/missing.csv
+
+============================================================
+        OS RESOURCE MANAGER SIMULATOR  (Python + Bash)
+============================================================
+ 1. CPU scheduling         (FCFS / SJF / SRTF / Priority / RR)
+ 2. Page replacement       (FIFO / LRU / OPT / Clock)
+ 3. Memory allocation      (first / best / worst fit)
+ 4. Deadlock handling      (Banker's + detection)
+ 5. Disk scheduling        (FCFS / SSTF / SCAN / C-SCAN / LOOK / C-LOOK)
+ 6. Run FULL analysis      (tables, charts, CSV, traces)
+ 7. Bash tools             (system snapshot / log summary / generate workload)
+ 0. Exit
+
+Select an option: Invalid option ''. Please enter 0-7.
+
+============================================================
+        OS RESOURCE MANAGER SIMULATOR  (Python + Bash)
+============================================================
+ 1. CPU scheduling         (FCFS / SJF / SRTF / Priority / RR)
+ 2. Page replacement       (FIFO / LRU / OPT / Clock)
+ 3. Memory allocation      (first / best / worst fit)
+ 4. Deadlock handling      (Banker's + detection)
+ 5. Disk scheduling        (FCFS / SSTF / SCAN / C-SCAN / LOOK / C-LOOK)
+ 6. Run FULL analysis      (tables, charts, CSV, traces)
+ 7. Bash tools             (system snapshot / log summary / generate workload)
+ 0. Exit
+
+Select an option: Invalid option ''. Please enter 0-7.
+
+============================================================
+        OS RESOURCE MANAGER SIMULATOR  (Python + Bash)
+============================================================
+ 1. CPU scheduling         (FCFS / SJF / SRTF / Priority / RR)
+ 2. Page replacement       (FIFO / LRU / OPT / Clock)
+ 3. Memory allocation      (first / best / worst fit)
+ 4. Deadlock handling      (Banker's + detection)
+ 5. Disk scheduling        (FCFS / SSTF / SCAN / C-SCAN / LOOK / C-LOOK)
+ 6. Run FULL analysis      (tables, charts, CSV, traces)
+ 7. Bash tools             (system snapshot / log summary / generate workload)
+ 0. Exit
+
+Select an option: Reference string (numbers) or 'file' [file]: 
+[ERROR] page number must be an integer, got 'x'.
+
+============================================================
+        OS RESOURCE MANAGER SIMULATOR  (Python + Bash)
+============================================================
+ 1. CPU scheduling         (FCFS / SJF / SRTF / Priority / RR)
+ 2. Page replacement       (FIFO / LRU / OPT / Clock)
+ 3. Memory allocation      (first / best / worst fit)
+ 4. Deadlock handling      (Banker's + detection)
+ 5. Disk scheduling        (FCFS / SSTF / SCAN / C-SCAN / LOOK / C-LOOK)
+ 6. Run FULL analysis      (tables, charts, CSV, traces)
+ 7. Bash tools             (system snapshot / log summary / generate workload)
+ 0. Exit
+
+Select an option: Allocation ops file [data/alloc_ops.txt]: 
+[ERROR] File not found: /home/claude/os_resource_manager/0
+
+============================================================
+        OS RESOURCE MANAGER SIMULATOR  (Python + Bash)
+============================================================
+ 1. CPU scheduling         (FCFS / SJF / SRTF / Priority / RR)
+ 2. Page replacement       (FIFO / LRU / OPT / Clock)
+ 3. Memory allocation      (first / best / worst fit)
+ 4. Deadlock handling      (Banker's + detection)
+ 5. Disk scheduling        (FCFS / SSTF / SCAN / C-SCAN / LOOK / C-LOOK)
+ 6. Run FULL analysis      (tables, charts, CSV, traces)
+ 7. Bash tools             (system snapshot / log summary / generate workload)
+ 0. Exit
+
+Select an option: Goodbye.

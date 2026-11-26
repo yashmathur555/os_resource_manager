@@ -1,0 +1,13 @@
+# Dynamic partitions: 1000 units of memory
+memory 1000
+alloc A 212
+alloc B 417
+alloc C 112
+alloc D 426
+free B
+alloc E 200
+free C
+alloc F 90
+alloc G 150
+free A
+alloc H 300

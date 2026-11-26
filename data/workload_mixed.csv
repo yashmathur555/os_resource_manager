@@ -1,0 +1,10 @@
+# Mixed interactive/batch workload with an idle gap
+pid,arrival,burst,priority
+P1,0,10,3
+P2,1,1,1
+P3,2,2,4
+P4,3,1,5
+P5,4,5,2
+P6,6,7,3
+P7,8,3,1
+P8,30,4,2

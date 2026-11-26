@@ -1,0 +1,16 @@
+dataset,algorithm,avg_waiting,avg_turnaround,avg_response,cpu_util_pct,throughput,context_switches
+workload_textbook,FCFS,8.75,15.25,8.75,100.0,0.1538,3
+workload_textbook,SJF,7.75,14.25,7.75,100.0,0.1538,3
+workload_textbook,SRTF,6.5,13.0,4.25,100.0,0.1538,4
+workload_textbook,Priority,7.75,14.25,7.75,100.0,0.1538,3
+workload_textbook,RR(q=4),11.75,18.25,4.5,100.0,0.1538,7
+workload_mixed,FCFS,8.62,12.75,8.62,97.06,0.2353,7
+workload_mixed,SJF,7.75,11.88,7.75,97.06,0.2353,7
+workload_mixed,SRTF,3.75,7.88,1.38,97.06,0.2353,8
+workload_mixed,Priority,10.5,14.62,10.5,97.06,0.2353,7
+workload_mixed,RR(q=4),8.62,12.75,4.5,97.06,0.2353,11
+workload_convoy,FCFS,35.33,44.17,35.33,100.0,0.1132,5
+workload_convoy,SJF,34.0,42.83,34.0,100.0,0.1132,5
+workload_convoy,SRTF,4.17,13.0,2.0,100.0,0.1132,6
+workload_convoy,Priority,35.33,44.17,35.33,100.0,0.1132,5
+workload_convoy,RR(q=4),8.17,17.0,6.0,100.0,0.1132,7

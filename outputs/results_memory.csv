@@ -1,0 +1,16 @@
+dataset,algorithm,frames_or_total,faults_or_failed,hits_or_holes,hit_ratio_or_frag_pct
+pages_textbook,FIFO,3,15,5,0.25
+pages_textbook,LRU,3,12,8,0.4
+pages_textbook,OPT,3,9,11,0.55
+pages_textbook,CLOCK,3,14,6,0.3
+pages_belady,FIFO,3,9,3,0.25
+pages_belady,LRU,3,10,2,0.1667
+pages_belady,OPT,3,7,5,0.4167
+pages_belady,CLOCK,3,9,3,0.25
+pages_locality,FIFO,3,26,10,0.2778
+pages_locality,LRU,3,20,16,0.4444
+pages_locality,OPT,3,17,19,0.5278
+pages_locality,CLOCK,3,26,10,0.2778
+alloc_ops,first-fit,1000,1,2,18.46
+alloc_ops,best-fit,1000,2,3,48.39
+alloc_ops,worst-fit,1000,1,2,18.46

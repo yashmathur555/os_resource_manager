@@ -1,0 +1,5 @@
+{
+  "description": "Heavier random-looking load, head in the middle",
+  "cylinders": 500, "head": 250, "direction": "down",
+  "requests": [45, 489, 120, 330, 12, 275, 410, 66, 199, 301, 480, 5, 222, 144, 377, 90, 455, 260, 18, 349]
+}

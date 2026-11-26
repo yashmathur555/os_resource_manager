@@ -1,0 +1,51 @@
+##### Dataset: disk_textbook (head=53, cylinders=200, direction=up) #####
+
+== FCFS ==
+Path: 53 -> 98 -> 183 -> 37 -> 122 -> 14 -> 124 -> 65 -> 67
+Total head movement=640  Avg seek per request=80.0
+
+== SSTF ==
+Path: 53 -> 65 -> 67 -> 37 -> 14 -> 98 -> 122 -> 124 -> 183
+Total head movement=236  Avg seek per request=29.5
+
+== SCAN ==
+Path: 53 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183 -> 199 -> 37 -> 14
+Total head movement=331  Avg seek per request=41.38
+
+== C-SCAN ==
+Path: 53 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183 -> 199 -> 0 -> 14 -> 37
+Total head movement=382  Avg seek per request=47.75
+
+== LOOK ==
+Path: 53 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183 -> 37 -> 14
+Total head movement=299  Avg seek per request=37.38
+
+== C-LOOK ==
+Path: 53 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183 -> 14 -> 37
+Total head movement=322  Avg seek per request=40.25
+
+##### Dataset: disk_heavy (head=250, cylinders=500, direction=down) #####
+
+== FCFS ==
+Path: 250 -> 45 -> 489 -> 120 -> 330 -> 12 -> 275 -> 410 -> 66 -> 199 -> 301 -> 480 -> 5 -> 222 -> 144 -> 377 -> 90 -> 455 -> 260 -> 18 -> 349
+Total head movement=5125  Avg seek per request=256.25
+
+== SSTF ==
+Path: 250 -> 260 -> 275 -> 301 -> 330 -> 349 -> 377 -> 410 -> 455 -> 480 -> 489 -> 222 -> 199 -> 144 -> 120 -> 90 -> 66 -> 45 -> 18 -> 12 -> 5
+Total head movement=723  Avg seek per request=36.15
+
+== SCAN ==
+Path: 250 -> 222 -> 199 -> 144 -> 120 -> 90 -> 66 -> 45 -> 18 -> 12 -> 5 -> 0 -> 260 -> 275 -> 301 -> 330 -> 349 -> 377 -> 410 -> 455 -> 480 -> 489
+Total head movement=739  Avg seek per request=36.95
+
+== C-SCAN ==
+Path: 250 -> 222 -> 199 -> 144 -> 120 -> 90 -> 66 -> 45 -> 18 -> 12 -> 5 -> 0 -> 499 -> 489 -> 480 -> 455 -> 410 -> 377 -> 349 -> 330 -> 301 -> 275 -> 260
+Total head movement=988  Avg seek per request=49.4
+
+== LOOK ==
+Path: 250 -> 222 -> 199 -> 144 -> 120 -> 90 -> 66 -> 45 -> 18 -> 12 -> 5 -> 260 -> 275 -> 301 -> 330 -> 349 -> 377 -> 410 -> 455 -> 480 -> 489
+Total head movement=729  Avg seek per request=36.45
+
+== C-LOOK ==
+Path: 250 -> 222 -> 199 -> 144 -> 120 -> 90 -> 66 -> 45 -> 18 -> 12 -> 5 -> 489 -> 480 -> 455 -> 410 -> 377 -> 349 -> 330 -> 301 -> 275 -> 260
+Total head movement=958  Avg seek per request=47.9

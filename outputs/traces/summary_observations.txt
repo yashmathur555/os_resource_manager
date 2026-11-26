@@ -1,0 +1,33 @@
+OS Resource Manager - summary of observations
+================================================
+
+[CPU scheduling]
+workload_textbook: lowest average waiting = SRTF (6.5); best response = SRTF (4.25); FCFS waiting = 8.75.
+workload_mixed: lowest average waiting = SRTF (3.75); best response = SRTF (1.38); FCFS waiting = 8.62.
+workload_convoy: lowest average waiting = SRTF (4.17); best response = SRTF (2.0); FCFS waiting = 35.33.
+
+[Memory]
+pages_textbook @3 frames: FIFO=15, LRU=12, OPT=9, CLOCK=14; fewest faults = OPT.
+pages_belady @3 frames: FIFO=9, LRU=10, OPT=7, CLOCK=9; fewest faults = OPT.
+pages_locality @3 frames: FIFO=26, LRU=20, OPT=17, CLOCK=26; fewest faults = OPT.
+Belady's anomaly detected under FIFO = True; faults for 1..7 frames = [12, 12, 9, 10, 5, 5, 5].
+Allocation: first-fit failed=1 frag=18.46%; best-fit failed=2 frag=48.39%; worst-fit failed=1 frag=18.46%
+
+[Deadlock]
+P1 requests [1, 0, 2]: GRANTED - Safe - request granted. (safe sequence: P1 -> P3 -> P4 -> P0 -> P2)
+P4 requests [3, 3, 0]: DENIED - Resources not available - process must wait.
+P0 requests [0, 2, 0]: DENIED - Granting would leave the system in an UNSAFE state.
+P2 requests [6, 0, 0]: DENIED - Resources not available - process must wait.
+banker_unsafe.json safe = False
+Detection deadlock_none: deadlocked = none; completion order = P0 -> P2 -> P3 -> P4 -> P1
+Detection deadlock_present: deadlocked = ['P1', 'P2', 'P3', 'P4']; completion order = P0
+
+[Storage]
+disk_textbook: FCFS=640, SSTF=236, SCAN=331, C-SCAN=382, LOOK=299, C-LOOK=322; lowest movement = SSTF.
+disk_heavy: FCFS=5125, SSTF=723, SCAN=739, C-SCAN=988, LOOK=729, C-LOOK=958; lowest movement = SSTF.
+
+[Host snapshot collected by Bash (sysinfo.sh)]
+note = unavailable (bash is not available on this system.)
+
+[Activity-log summary computed by Bash (log_summary.sh)]
+note = unavailable (bash is not available on this system.)
